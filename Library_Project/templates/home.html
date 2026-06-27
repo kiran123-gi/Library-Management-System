@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library</title>
+</head>
+<body>
+
+<h1>Library Books</h1>
+
+<a href="{% url 'add_book' %}">Add Book</a>
+
+<ul>
+    {% for book in books %}
+        <li>
+            {{ book.title }} - {{ book.author }} ({{ book.quantity }})
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
